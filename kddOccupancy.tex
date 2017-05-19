@@ -59,31 +59,15 @@
 
 
 % The default list of authors is too long for headers}
-\renewcommand{\shortauthors}{B. Trovato et al.}
+\renewcommand{\shortauthors}{H. Shao et al.}
 
 
 \begin{abstract}
-With the advent of modern sensor technologies, 
-significant opportunities have opened up to help conserve energy in 
-residential and commercial buildings. Moreover, the rapid \emph{urbanization} we are witnessing requires optimized energy distribution. 
-This paper focuses on two sub-problems in improving energy conservation; \emph{energy disaggregation and occupancy prediction}. 
-Energy disaggregation attempts to 
-separate the energy usage 
-of each circuit or each electric device in a building 
-using only aggregate electricity usage information from 
-the meter for the whole house. 
-The second problem of occupancy prediction can be accomplished using non-invasive indoor activity tracking to 
-predict the locations of people inside a building. 
-We cast both problems as \emph{temporal mining problems}. We exploit motif mining with constraints to distinguish devices with multiple states, which helps tackle the energy disaggregation problem. Our
-results reveal that motif mining is adept at distinguishing
-devices with multiple power levels and at disentangling the
-combinatorial operation of devices.
-For the second problem we propose time-gap constrained episode mining to detect 
-activity patterns followed by the use of a mixture of episode generating HMM (EGH) models 
-to predict home occupancy.  
-Finally, we demonstrate that the mixture EGH
-model can also help predict the location of a person to 
-address non-invasive indoor activities tracking. 
+Conserving energy and optimizing its use has been a long standing challenge. 
+Apart from the monetary benefits associated with tackling these problems, saving energy has significant positive environmental impact. 
+For instance, it would be useful to automatically adjust the HVAC of residential buildings based on occupancy.
+In this work, we mine people's energy activity profile to predict the occupancy of residential buildings. I propose a novel hybrid method, which uses episode mining for target event  detection and a mixture of episode-generating HMM (EGH), 
+combined with the standard kNN approaches and demonstrate how this hybrid approach always yields the best results.
 \end{abstract}
 
 %
@@ -93,18 +77,19 @@ address non-invasive indoor activities tracking.
 %
 
 
-\keywords{ACM proceedings, \LaTeX, text tagging}
+\keywords{occupancy prediction, motif mining, hidden Markov model}
 
 
 \maketitle
 
-\include{sec/introduction}
-\include{sec/prior}
-%\include{sec/multivariateApp}
-\include{sec/predictionApp}
-%\include{sec/disaggResults}
-\include{sec/predictionResults}
-\input{sec/conclusion.tex}
+%\input{adlsec/abstract.tex}
+\input{adlsec/introduction.tex}
+\input{adlsec/related.tex}
+\input{adlsec/formulation.tex}
+\input{adlsec/algorithm.tex}
+\input{adlsec/result.tex}
+\input{adlsec/conclusion.tex}
+%\input{adlsec/appendix.tex}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references} 
