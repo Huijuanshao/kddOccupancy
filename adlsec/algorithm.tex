@@ -70,14 +70,14 @@ two consecutive events inside an episode.
 Figure~\ref{fig_MingExample} shows a time-gap constraint episode mining example. 
 Let us assume we have a frequent episode $S\rightarrow B \rightarrow K\rightarrow Z$. 
 We then add the time constraints to each event $\{S,B,K,Z\}$. 
-The dwelling duration of $S$ is 3 to 6 hours,   
+The dwelling duration of $S$ is 3 to 9 hours,   
 of $B$ is 2 to 20 minutes, 
-of $K$ is 5 to 60 minutes, 
+of $K$ is 2 to 60 minutes, 
 and of $Z$ is 3-9 hours. 
 In addition, we set gap duration between any two consecutive events. 
 The gap duration of $SB$ is calculated as $\Delta{SB} = B.start-S.end$. 
 We set the maximal gap time between SB, BK, and KZ as 
-10 minutes, 40 minutes and 100 minutes; 
+10 minutes, 10 minutes and 100 minutes; 
 the minimal gap time is 0. 
 Then we have a stream composed of the sequence of dwelling events "Event seq," as shown 
 in Figure~\ref{fig_MingExample}.  
@@ -90,9 +90,9 @@ and has the same length of this episode.
 Initially, a $waits$ structure related to episode $S\rightarrow B \rightarrow K\rightarrow Z$ is created. 
 A $node$ structure related to $S$ is created 
 and it waits for the first 
-element of the episode $S\langle 180, 360 \rangle $. 
+element of the episode $S\langle 180, 540 \rangle $. 
 When $T=1$, the duration of $S_1$ is checked. 
-Since $S_1$ is in the range of $3-6$ hours, 
+Since $S_1$ is in the range of $3-9$ hours, 
 $S_1$ passes and is put into the node structure $node$ related to $S$. 
 Next a new $node$ structure is created to wait for $B\langle 2, 20 \rangle $. 
 When $T=2$ and $T=3$, both $B_2$ and $B_3$ 
@@ -103,10 +103,10 @@ be between 0 and 10 minutes.
 These two nodes $B_2$ and $B_3$ are then input into the 
 $waits$ structure. 
 At the same time, 
-a new $node$ structure is created for $K\langle 5, 60 \rangle $. 
+a new $node$ structure is created for $K\langle 2, 60 \rangle $. 
 When $T=4$, the gap between $\langle B_3, K_4 \rangle$ 
 is satisfied with the distance condition between 
-$B$ and $K$ 0-40 minutes. 
+$B$ and $K$ 0-10 minutes. 
 However, the gap between $\langle B_2, K_4 \rangle$ 
 is longer than the constraint gap. 
 Therefore, $B_2$ is canceled out. 
@@ -120,7 +120,7 @@ and its distance to $K4$ meet the requirement
 of $\Delta KZ \in [0,100]$ minutes. 
 Thus $Z_{10}$ is added into the $node$ $Z$ structure in $waits$.
 Therefore, complete mining of an episode is complete, and 
-we have mined two instances here; $S_1B_3K_4Z_{10}$ and $S_1B_3K_6Z_{10}$. 
+we have mined one instance $S_1B_3K_4Z_{10}$. 
 
 %This complete gap-constraint episode mining on dwelling events 
 %is described in detail in Algorithm \ref{alg_episodeMiningConstraint}
