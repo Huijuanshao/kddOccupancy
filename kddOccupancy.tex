@@ -1,5 +1,9 @@
 \documentclass[sigconf]{acmart}
 
+\settopmatter{printacmref=false}
+%\renewcommand\footnotetextcopyrightpermission[1]{}
+%\pagestyle{plain}
+
 \usepackage{booktabs} % For formal tables
 \usepackage{times}
 \usepackage{helvet}
@@ -23,6 +27,8 @@
 %\setcopyright{usgovmixed}
 %\setcopyright{cagov}
 %\setcopyright{cagovmixed}
+
+%\setcopyright{Copyright is held by the author/owner(s). UrbComp'17, August 14, 2017, Halifax, Nova Scotia, Canada.}
 
 
 % DOI
@@ -65,10 +71,10 @@ Residential Occupancy Prediction}
 
 \begin{abstract}
 Conserving energy and optimizing its use has been a long standing challenge. 
-Apart from the monetary benefits associated with tackling these problems, saving energy has significant positive environmental impact. 
-For instance, it would be useful to automatically adjust the HVAC of residential buildings based on occupancy.
-In this work, we mine people's energy activity profile to predict the occupancy of residential buildings. We propose a novel hybrid method, which uses episode mining for target event  detection and a mixture of episode-generating HMM (EGH), 
-combined with the standard kNN approaches and demonstrate how this hybrid approach always yields the best results.
+Apart from the monetary benefits associated with successfully tackling these problems, saving energy has a significant positive environmental impact. 
+One potentially fruitful approach would be to automatically adjust the HVAC of residential buildings based on occupancy.
+In this study, we mine people's individual energy activity profiles to predict the occupancy of residential buildings. A novel hybrid method is proposed that uses episode mining for target event  detection and a mixture of episode-generating HMM (EGH), 
+combined with standard kNN approaches. We conclude by demonstrating how this hybrid approach consistently yields the best results.
 \end{abstract}
 
 %
@@ -91,6 +97,12 @@ combined with the standard kNN approaches and demonstrate how this hybrid approa
 \input{adlsec/result.tex}
 \input{adlsec/conclusion.tex}
 %\input{adlsec/appendix.tex}
+
+\section{Acknowledgments}
+This research has been supported in part by US National Science Foundation grant
+DGE-1545362 and the Institute for Critical Technology and Applied Science, Virginia
+Tech. The funders had no role in study design, data collection and analysis, decision to
+publish, or preparation of the manuscript.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references} 

@@ -1,21 +1,26 @@
 \section{Conclusion}
-Residential occupancy prediction is a hot research topic in controlling HVAC systems. 
-The accuracy of occupancy prediction influences the comfort of the persons inside 
-the home and energy savings. 
-In order to achieve the highest prediction result, 
-we propose to integrate the mixture EGH model and 
-kNN together as a hybrid approach.
+Residential occupancy prediction is a hot research topic supporting efforts to control HVAC systems more efficiently, 
+with a consequent reduction in energy consumption. 
+Increasing the accuracy of occupancy prediction allows these saving to be made 
+without sacrificing the comfort of those living inside 
+the home. 
+In order to achieve the best prediction results, 
+we propose integrating the mixture EGH model and 
+kNN to create a new hybrid approach.
 
 Our work differs from previous research based on the main contributions listed below:
 \begin{enumerate}
-\item We formulate the problem as one of temporal mining; the activities inside the building are abstracted as episodes, and each episode is connected with an episode generative HMM model.
-\item We mine the activity patterns according to the time and gap: both the duration of each type of 
-activity, and the gap between two consecutive events are limited in a proper range. 
-This range is extracted from the historical data according to the weekday and holidays.
-\item Our hydrate prediction solution performs best on the workday occupancy prediction: 
-in case of normal activities, we apply mixture EGH model; 
-in case of abnormal events, we utilize kNN,  
-which is generally considered a benchmark in occupancy prediction problem. 
+\item We formulate the problem as one of temporal mining, 
+where the activities inside the building are abstracted as episodes, 
+and each episode is connected via an episode generative HMM model.
+\item We mine the activity patterns according to the times and the gaps between them: 
+both the duration of each type of 
+activity, and the gap between two consecutive events are limited within an appropriate range. 
+This range is extracted from historical data according to the day of the week and holidays.
+\item Our hydrid prediction solution performs best for workday occupancy prediction: 
+in the case of normal activities, a mixture EGH model is applied and
+in the case of abnormal events, kNN is utilized,  
+as this is generally considered a benchmark in occupancy prediction problems. 
 \end{enumerate}
 %In this paper, we propose the mixture EGH model and compare it with two other 
 %benchmark models, probability density function and kNN approach. 
@@ -31,9 +36,10 @@ which is generally considered a benchmark in occupancy prediction problem.
 %Even if there is an abnormal day, 
 %kNN can leverage it. 
 
-In the future work, we will continue working on the holiday occupancy prediction. 
-The occupancy patterns for these days are completely different. 
-For example, on certain weekdays, a person may never go out. 
-Therefore the occupancy prediction probably depends more on date than the indoor activities. 
-Furthermore, we will apply this temporal mining approach to the GPS datasets~\cite{koehler2013therml}
-to check the effectiveness of occupancy prediction with different kinds of data. 
+In future work, we plan to continue working on improving holiday occupancy prediction. 
+This is a  more intractable problem because 
+the occupancy patterns for these days are completely different. 
+For example, on certain days, a person may never leave the house. 
+Therefore the occupancy prediction for holidays probably depends more on the date than on the indoor activities performed. 
+We also plan to apply this new temporal mining approach to GPS datasets~\cite{koehler2013therml}
+to test the effectiveness of occupancy prediction with different kinds of data. 

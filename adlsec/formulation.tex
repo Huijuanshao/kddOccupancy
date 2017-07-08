@@ -1,14 +1,14 @@
 \section{Problem Formulation}
 Given $M$ time series, 
 each time series $X^{(m)}=X^{(m)}_1, ..., X^{(m)}_t, ..., X_T^{(m)}$ 
-represents a sequence of room occupancy of person $m$ inside 
+represents a sequence describing the room occupancy of person $m$ inside 
 a home over $K$ days, 
 where $X_t\in s$ denotes that $X$ belongs to a finite room set $s$ at the sequence number of $t$, 
 and $m\in\{1,...,M\}$. 
 %Each $X$ is has a start time $X.start$ and an end time $X.end$.  
 Let $Z$ denote that the home is unoccupied and $Z\in s$.  %$Z=0$ if a house is unoccupied; $Z=1$ if the house is occupied.  
 %Its meaning equals to certain symbols from set $s$. 
-We predict whether person $m$ stays at home the rest of a day from time $T$,  i.e. during $T+1$, $T+2$, ..., $\Delta T$, 
+We can then predict whether person $m$ will stay at home for the rest of a day from time $T$,  i.e. during $T+1$, $T+2$, ..., $\Delta T$, 
  
 \begin{equation}
 \hat{Y}^{(m)}=\hat{Y}_{T+1}^{(m)},...,\hat{Y}^{(m)}_{T+\Delta T}
